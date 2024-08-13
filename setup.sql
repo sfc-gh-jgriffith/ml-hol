@@ -13,7 +13,7 @@ USE DATABASE quickstart;
 USE SCHEMA ml_functions;
 
 -- Create warehouse to work with: 
-CREATE OR REPLACE WAREHOUSE quickstart_wh;
+CREATE WAREHOUSE IF NOT EXISTS quickstart_wh;
 USE WAREHOUSE quickstart_wh;
 
 -- Set search path for ML Functions:
