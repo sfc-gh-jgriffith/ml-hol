@@ -45,5 +45,10 @@ CREATE OR REPLACE TABLE quickstart.ml_functions.tasty_byte_sales(
 COPY INTO quickstart.ml_functions.tasty_byte_sales 
     FROM @s3load/ml_functions_quickstart.csv;
 
+CREATE OR REPLACE NOTEBOOK "ML Functions Quickstart"
+    FROM '@git.public.ml_functions/branches/main/QUICKSTART ML FUNCTIONS'
+    MAIN_FILE = 'notebook_app.ipynb'
+    QUERY_WAREHOUSE = quickstart_wh;
+
 
 
